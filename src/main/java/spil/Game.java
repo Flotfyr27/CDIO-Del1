@@ -1,35 +1,22 @@
 /**
  * This is the main class of the game. this class controls which player can act, and when the game is running.
  */
-package main.java.spil;
+package spil;
 //import gui_main.gui;
 
 public class Game {
+    int numberOfPlayers;
+    Player[] players;
 
-    public static void main(String[] args) {
-        int numberOfPlayers = 2;
-        Player[] players = CreatePlayers(numberOfPlayers);
-
-        //The game loop. is active as long as no player has won
-        do{
-            for (Player player : players) {
-                player.main();
-
-                if (player.GetWon()) {
-                    System.out.println(player.name + " Won!");
-                    return;
-                }
-            }
-        } while (!CheckForWin(players));
-
-
+    public Game(int numberOfPlayers){
+        this.numberOfPlayers = numberOfPlayers;
+        players = CreatePlayers(numberOfPlayers);
     }
-
     private static Player[] CreatePlayers(int numberOfPlayers){
         Player[] players = new Player[numberOfPlayers];
 
-        for (Player player : players) {
-            player = new Player();
+        for (int i = 0; i < numberOfPlayers; i++) {
+            players[i] = new Player();
         }
         return players;
     }
