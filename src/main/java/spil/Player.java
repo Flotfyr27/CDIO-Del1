@@ -7,9 +7,6 @@ public class Player {
     private boolean won;
 
     //The method being invoked by the Game when it's the players turns.
-    public void main() {
-        System.out.println(name);
-    }
 
     public Player(){
         won = false;
