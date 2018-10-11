@@ -22,7 +22,7 @@ public class Game {
     }
 
    //A function which checks all players for having won
-    private static boolean CheckForWin(Player[] players){
+    public static boolean CheckForWin(Player[] players){
         for (Player player : players) {
             if (player.GetWon())
                 return true;
