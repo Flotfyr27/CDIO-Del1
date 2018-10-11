@@ -1,6 +1,9 @@
 /**
  * This is the main class of the game. this class controls which player can act, and when the game is running.
  */
+package main.java.spil;
+//import gui_main.gui;
+
 public class Game {
 
     public static void main(String[] args) {
@@ -13,7 +16,7 @@ public class Game {
                 player.main();
 
                 if (player.GetWon()) {
-                    System.out.println(player.name + "Won!");
+                    System.out.println(player.name + " Won!");
                     return;
                 }
             }

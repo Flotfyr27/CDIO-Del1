@@ -1,3 +1,5 @@
+
+package main.java.spil;
 public class Player {
 
     private static int numberOfPlayers = 0;
@@ -22,4 +24,5 @@ public class Player {
         return won;
     }
 
+    //Brug SecureRandom rand = new SecureRandom();
 }
