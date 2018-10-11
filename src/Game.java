@@ -4,8 +4,8 @@
 public class Game {
 
     public static void main(String[] args) {
-        final int NUMBER_OF_PLAYERS = 2;
-        Player[] players = CreatePlayers(NUMBER_OF_PLAYERS);
+        int numberOfPlayers = 2;
+        Player[] players = CreatePlayers(numberOfPlayers);
 
         //The game loop. is active as long as no player has won
         do{
