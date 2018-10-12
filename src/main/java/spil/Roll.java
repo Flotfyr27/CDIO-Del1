@@ -32,7 +32,7 @@ public class Roll {
             return false;
     }
 
-    public String ToString(){
+    public String toString(){
         return "(" + value1 + ", " + value2 + ")";
     }
 }

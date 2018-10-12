@@ -13,9 +13,9 @@ public class Player {
     private int score;
     private boolean won;
     private boolean rolledDoubble;
-    private Roll lastRoll = roll;
+    private Roll lastRoll;
 
-    private String rollLog = "";
+    private String rollLog;
 
     //The method being invoked by the Game when it's the players turns.
     public void main() {
@@ -33,7 +33,7 @@ public class Player {
 
             }
 
-            rollLog.concat(" score: " + roll);
+            rollLog = rollLog.concat("score: " + roll.toString() + "\n");
 
             if (CheckWin()) {
                 won = true;
@@ -49,11 +49,10 @@ public class Player {
         won = false;
         score = 0;
         NAME = "Player " + ++numberOfPlayers;
+        rollLog = "";
+        lastRoll = roll;
     }
 
-    public void SetWon(boolean arg){
-        won = arg;
-    }
 
     public boolean GetWon(){
         return won;
@@ -74,5 +73,9 @@ public class Player {
 
     public void setRollLog(String rollLog) {
         this.rollLog = rollLog;
+    }
+
+    public int getScore() {
+        return score;
     }
 }
