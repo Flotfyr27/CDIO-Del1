@@ -28,7 +28,7 @@ public class Main {
                 gui.setScore(player.NAME, player.getScore());
 
                 if (player.GetWon()) {
-                    gui.WriteMessage(player.NAME + " Won!");
+                    gui.WriteMessage(gui.getMessage() + "\n" + player.NAME + " Won!");
                     return;
                 }
             }
