@@ -1,5 +1,7 @@
 package spil;
 
+import com.sun.glass.ui.Screen;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,12 +9,12 @@ import java.awt.event.ActionListener;
 
 public class GUI {
     private JLabel lblp1, lblp2, sp1, sp2;
-
+    private JTextArea msg;
 
     public GUI() {
         JFrame jframe = new JFrame();
         jframe.setTitle("32_del1");
-        jframe.setSize(250,120);
+        jframe.setSize(300,200);
         jframe.setResizable(false);
         jframe.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         jframe.setLayout(new FlowLayout());
@@ -22,6 +24,8 @@ public class GUI {
 
         sp1 = new JLabel("0");
         sp2 = new JLabel("0");
+
+        msg = new JTextArea();
 
         jframe.add(lblp1);
         jframe.add(sp1);
@@ -41,13 +45,17 @@ public class GUI {
 
         jframe.add(jbtn);
 
+        jframe.add(msg);
+        msg.setPreferredSize(new Dimension(200,100));
+
+        jframe.setLocation(300,300);
         jframe.setVisible(true);
 
 
     }
 
-
-    public static void main(String[] args) {
-        new GUI();
+    public void WriteMessage(String message){
+        msg.setText("message");
     }
+
 }

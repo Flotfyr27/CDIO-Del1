@@ -26,8 +26,10 @@ public class Player {
 
             score += roll.GetAddedScore();
 
-            if (roll.isSnakesEyes())
+            if (roll.isSnakesEyes()) {
                 score = 0;
+
+            }
 
             System.out.println(NAME + " score: " + score);
 
