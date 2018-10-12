@@ -15,6 +15,8 @@ public class Player {
     private boolean rolledDoubble;
     private Roll lastRoll = roll;
 
+    private String rollLog = "";
+
     //The method being invoked by the Game when it's the players turns.
     public void main() {
         do{
@@ -31,7 +33,7 @@ public class Player {
 
             }
 
-            System.out.println(NAME + " score: " + score);
+            rollLog.concat(" score: " + roll);
 
             if (CheckWin()) {
                 won = true;
@@ -64,5 +66,13 @@ public class Player {
             return true;
         else
             return false;
+    }
+
+    public String getRollLog() {
+        return rollLog;
+    }
+
+    public void setRollLog(String rollLog) {
+        this.rollLog = rollLog;
     }
 }

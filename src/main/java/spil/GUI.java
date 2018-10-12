@@ -10,8 +10,10 @@ import java.awt.event.ActionListener;
 public class GUI {
     private JLabel lblp1, lblp2, sp1, sp2;
     private JTextArea msg;
+    public boolean buttonPressed;
 
     public GUI() {
+        buttonPressed = false;
         JFrame jframe = new JFrame();
         jframe.setTitle("32_del1");
         jframe.setSize(300,200);
@@ -44,6 +46,7 @@ public class GUI {
         });
 
         jframe.add(jbtn);
+        jbtn.addActionListener(actionListener);
 
         jframe.add(msg);
         msg.setPreferredSize(new Dimension(200,100));
@@ -55,7 +58,14 @@ public class GUI {
     }
 
     public void WriteMessage(String message){
-        msg.setText("message");
+        msg.setText(message);
     }
 
+
+
+    ActionListener actionListener = new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+            buttonPressed = true;
+        }
+    };
 }

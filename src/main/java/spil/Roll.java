@@ -31,4 +31,8 @@ public class Roll {
         else
             return false;
     }
+
+    public String ToString(){
+        return "(" + value1 + ", " + value2 + ")";
+    }
 }
