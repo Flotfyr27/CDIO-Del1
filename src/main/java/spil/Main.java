@@ -14,7 +14,7 @@ public class Main {
                 player.main();
 
                 if (player.GetWon()) {
-                    System.out.println(player.name + " Won!");
+                    System.out.println(player.NAME + " Won!");
                     return;
                 }
             }

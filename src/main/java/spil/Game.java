@@ -12,7 +12,7 @@ public class Game {
         this.numberOfPlayers = numberOfPlayers;
         players = CreatePlayers(numberOfPlayers);
     }
-    private static Player[] CreatePlayers(int numberOfPlayers){
+    private Player[] CreatePlayers(int numberOfPlayers){
         Player[] players = new Player[numberOfPlayers];
 
         for (int i = 0; i < numberOfPlayers; i++) {
@@ -22,7 +22,7 @@ public class Game {
     }
 
    //A function which checks all players for having won
-    public static boolean CheckForWin(Player[] players){
+    public boolean CheckForWin(Player[] players){
         for (Player player : players) {
             if (player.GetWon())
                 return true;
