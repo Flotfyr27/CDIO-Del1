@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/32_del1.iml" filepath="$PROJECT_DIR$/32_del1.iml" />
       <module fileurl="file://$PROJECT_DIR$/CDIO-Del1.iml" filepath="$PROJECT_DIR$/CDIO-Del1.iml" />
     </modules>
   </component>
