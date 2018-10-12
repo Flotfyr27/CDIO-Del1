@@ -12,13 +12,17 @@ public class GUI {
     private JTextArea msg;
     private JButton jbtn;
     public boolean buttonPressed;
+    int jFrameWidth, jFrameHeight;
 
 
     public GUI() {
         buttonPressed = false;
         JFrame jframe = new JFrame();
         jframe.setTitle("32_del1");
-        jframe.setSize(300,200);
+        Dimension screenDimension = Toolkit.getDefaultToolkit().getScreenSize();
+        jFrameWidth = (int)(screenDimension.getWidth() * 0.7);
+        jFrameHeight = (int)(screenDimension.getHeight() * 0.5);
+        jframe.setSize(jFrameWidth, jFrameHeight);
         jframe.setResizable(false);
         jframe.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         jframe.setLayout(new FlowLayout());
