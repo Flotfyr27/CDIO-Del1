@@ -10,7 +10,7 @@ public class Die {
     }
 
     public int RollDie(){
-        faceValue = (int) ((Math.random() * 5) + 1);
+        faceValue = (int) ((Math.random() * 6) + 1);
         return faceValue;
     }
 
